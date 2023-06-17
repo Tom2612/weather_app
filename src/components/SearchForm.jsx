@@ -11,7 +11,7 @@ export default function SearchForm(props) {
         return props.setCities(null);
         }
 
-        const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=c6332489d214b5eefb799cffe1ca4f0e`, {mode:'cors'});
+        const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${import.meta.env.VITE_app_ID}`, {mode:'cors'});
         const cityData = await response.json();
 
         props.setCities(cityData);
