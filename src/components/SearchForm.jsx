@@ -15,6 +15,7 @@ export default function SearchForm(props) {
         const cityData = await response.json();
 
         props.setCities(cityData);
+        console.log(cityData)
   }
     return (
         <form onSubmit={handleSubmit}>
