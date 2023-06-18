@@ -4,13 +4,28 @@
 body{
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+    /* background: no-repeat url('https://images.unsplash.com/photo-1640690821275-c6aa1e1ccee3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80'); */
+    /* background-size: cover; */
+
 }
 .material-symbols-outlined {
-    font-size: 10rem;
+    font-size: 2rem;
     font-variation-settings: 
     'FILL' 0,
     'wght' 100,
     'GRAD' 0,
     'opsz' 48    
     ;
+}
+#cities-container {
+
+}
+#main-weather-container {
+
+}
+#extended-weather-container {
+
+}
+#forecast-container {
+
 }

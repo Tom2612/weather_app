@@ -1,6 +1,6 @@
 export default function CityList(props) {
   return (
-    <div>
+    <div id='cities-container'>
         {props.list.map((city, index) => (
             <div key={city.name + city.country + index} onClick={() => props.handleSelect(city)}>
                 <h1>{city.name}</h1>

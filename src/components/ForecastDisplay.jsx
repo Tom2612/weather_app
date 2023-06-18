@@ -4,7 +4,7 @@ export default function ForecastDisplay(props) {
     const { forecast } = props.data;
 
     return (
-        <div>
+        <div id='forecast-container'>
             {forecast.map((day, index) => (
                 <div key={index}>
                     <h1>{day.dt_txt}</h1>

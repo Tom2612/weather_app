@@ -2,7 +2,7 @@
 
 export default function ExtendedWeatherDisplay({ data }) {
     return (
-        <div>
+        <div id='extended-weather-container'>
             <span className="material-symbols-outlined">thermostat</span>
             <p>Feels Like: {data.weather.main.feels_like}</p>
             <span className="material-symbols-outlined">water_drop</span>
