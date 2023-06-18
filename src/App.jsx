@@ -3,6 +3,7 @@ import SearchForm from './components/SearchForm';
 import CityList from './components/CityList';
 import WeatherDisplay from './components/WeatherDisplay';
 import ForecastDisplay from './components/ForecastDisplay';
+import ExtendedWeatherDisplay from './components/ExtendedWeatherDisplay';
 
 function App() {
   const [cities, setCities] = useState(null);
@@ -30,6 +31,7 @@ function App() {
       <SearchForm setCities={setCities} />
       {cities && <CityList list={cities} handleSelect={handleSelect} /> }
       {data && <WeatherDisplay data={data} /> }
+      {data && <ExtendedWeatherDisplay data={data} />}
       {data && <ForecastDisplay data={data} />}
     </>
   )
