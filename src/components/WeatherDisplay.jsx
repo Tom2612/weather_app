@@ -2,7 +2,7 @@
 import codeSelector from "../utils/codeSelector";
 
 export default function WeatherDisplay(props) {
-    const { name, coord, sys, main, weather } = props.weather;
+    const { name, coord, sys, main, weather } = props.data.weather;
 
     return (
         <div>
