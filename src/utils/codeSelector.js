@@ -1,25 +1,25 @@
 export default function codeSelector(code) {
     if (code < 300) {
-        return '11d';
+        return 'thunderstorm';
     } else if (code < 400) {
-        return '09d';
+        return 'rainy_light';
     } else if (code < 505) {
-        return '10d';
+        return 'rainy';
     } else if (code === 511) {
-        return '13d';
+        return 'rainy_snow';
     } else if (code < 600) {
-        return '09d';
+        return 'rainy';
     } else if (code < 700) {
-        return '13d';
-    } else if (code < 800) {
-        return '50d';
+        return 'cloudy_snowing  ';
+    } else if (code < 780) {
+        return 'foggy';
+    }else if (code === 781) {
+        return 'tornado'
     } else if (code == 800) {
-        return '01d';
-    } else if (code < 802) {
-        return '02d';
+        return 'sunny';
     } else if (code < 803) {
-        return '03d';
+        return 'partly_cloudy_day';
     } else if (code < 805) {
-        return '04d';
+        return 'cloudy';
     }
 }

@@ -1,4 +1,5 @@
 // import fromUnixTime from 'date-fns/fromUnixTime';
+import codeSelector from "../utils/codeSelector";
 
 export default function WeatherDisplay(props) {
     const { name, coord, sys, main, weather } = props.weather;
@@ -13,6 +14,7 @@ export default function WeatherDisplay(props) {
             {/* <h4>Sunrise: {fromUnixTime(sys.sunrise).toString().split(' ')[4]}</h4> */}
             {/* <h4>Sunset: {fromUnixTime(sys.sunset).toString().split(' ')[4]}</h4> */}
             <h5>weather: </h5>
+            <span className="material-symbols-outlined">{codeSelector(weather[0].id)}</span>
             <p>{weather[0].main}, {weather[0].description}</p>
         </div>
     )
