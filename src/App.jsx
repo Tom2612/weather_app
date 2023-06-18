@@ -27,7 +27,7 @@ function App() {
   const handleSelect = async (city) => {
     setChosenCity(city);
     setCities(null);
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${city.lat}&lon=${city.lon}&appid=${import.meta.env.VITE_app_ID}`)
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.name},${city.country}&appid=${import.meta.env.VITE_app_ID}&units=metric`)
     const json = await response.json();
 
     setWeather(json);
@@ -40,6 +40,7 @@ function App() {
       <SearchForm setCities={setCities} />
       {cities && <CityList list={cities} handleSelect={handleSelect} /> }
       {weather && <WeatherDisplay weather={weather} /> }
+      {/* <span className='material-symbols-outlined'>thunderstorm</span> */}
     </>
   )
 }
