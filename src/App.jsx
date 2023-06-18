@@ -7,12 +7,12 @@ import ExtendedWeatherDisplay from './components/ExtendedWeatherDisplay';
 
 function App() {
   const [cities, setCities] = useState(null);
-  const [chosenCity, setChosenCity] = useState(null);
   const [data, setData] = useState(null);
 
   const handleSelect = async (city) => {
-    setChosenCity(city);
+
     setCities(null);
+
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.name},${city.country}&appid=${import.meta.env.VITE_app_ID}&units=metric`);
     const response2 = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city.name},${city.country}&appid=${import.meta.env.VITE_app_ID}&units=metric`);
 
@@ -23,7 +23,8 @@ function App() {
       weather: weatherjson,
       forecast: [forecastjson.list[2], forecastjson.list[10], forecastjson.list[18], forecastjson.list[26], forecastjson.list[34]]
     });
-    console.log(data)
+    
+    console.log(data);
   }
 
   return (
@@ -37,4 +38,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
