@@ -30,6 +30,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 #form-container {
     border: 1px solid blue;
+    margin: 0 2rem;
+    padding: 1rem;
+    & input {
+        padding: 5px;
+        font-family: inherit;
+        font-size: inherit;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+    & button {
+        margin-left: 0.5rem;
+        font-size: inherit;
+        font-family: inherit;
+        color: white;
+        background: black;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 }
 #weather-container {
     display: flex;
