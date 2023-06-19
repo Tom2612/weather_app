@@ -10,7 +10,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     /* background: no-repeat url('https://images.unsplash.com/photo-1640690821275-c6aa1e1ccee3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80'); */
     /* background-size: cover; */
-
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
@@ -23,13 +22,18 @@ h1, h2, h3, h4, h5, h6 {
     'opsz' 48    
     ;
 }
+#container-main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 #form-container {
     border: 1px solid blue;
 }
 #weather-container {
     display: flex;
     justify-content: space-between;
-
 }
 #main-weather-container {
     border: 1px solid black;
@@ -63,5 +67,33 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 #forecast-container {
+    margin: auto 2rem 0 2rem;
     border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    & h1 {
+        font-size: 1.5rem;
+    }
+    & #forecast-temp-main {
+        margin-top: 0.5rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    & p {
+        font-size: 0.8rem;
+    }
+    & #forecast-weather {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
+    & span {
+        text-align: center;
+        font-size: 3rem;
+    }
+    & .material-symbols-outlined {
+        font-variation-settings:
+            'wght' 300;
+    }
 }   
