@@ -29,10 +29,15 @@ function App() {
 
   return (
     <>
-      <SearchForm setCities={setCities} />
-      {cities && <CityList list={cities} handleSelect={handleSelect} /> }
-      {data && <WeatherDisplay data={data} /> }
-      {data && <ExtendedWeatherDisplay data={data} />}
+      <div id='form-container'>
+        <SearchForm setCities={setCities} />
+        {cities && <CityList list={cities} handleSelect={handleSelect} /> }
+      </div>
+      
+      <div id='weather-container'>
+        {data && <WeatherDisplay data={data} /> }
+        {data && <ExtendedWeatherDisplay data={data} />}
+      </div>
       {data && <ForecastDisplay data={data} />}
     </>
   )
