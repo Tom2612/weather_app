@@ -51,6 +51,24 @@ h1, h2, h3, h4, h5, h6 {
         cursor: pointer;
     }
 }
+#cities-container {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    & h2 {
+        font-size: 1.2rem;
+    }
+    & p {
+        font-size: 0.9rem;
+    }
+    & #city:hover {
+        cursor: pointer;
+        & h2 {
+            text-decoration: underline;
+        }
+    }
+    
+}
 #weather-container {
     display: flex;
     justify-content: space-between;
