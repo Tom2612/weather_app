@@ -16,7 +16,6 @@ export default function SearchForm(props) {
 
         props.setCities(cityData);
         setCity('');
-        console.log(cityData)
   }
     return (
         <form onSubmit={handleSubmit}>

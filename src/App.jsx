@@ -23,8 +23,6 @@ function App() {
       weather: weatherjson,
       forecast: [forecastjson.list[2], forecastjson.list[10], forecastjson.list[18], forecastjson.list[26], forecastjson.list[34]]
     });
-    
-    console.log(data);
   }
 
   return (
