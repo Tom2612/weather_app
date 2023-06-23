@@ -5,6 +5,7 @@ import WeatherDisplay from './components/WeatherDisplay';
 import ForecastDisplay from './components/ForecastDisplay';
 import ExtendedWeatherDisplay from './components/ExtendedWeatherDisplay';
 import { DarkModeProvider } from './contexts/DarkModeContext';
+import DarkModeSwitch from './components/DarkModeSwitch';
 
 function App() {
   const [cities, setCities] = useState(null);
@@ -53,6 +54,7 @@ function App() {
       <div id='container-main'>
         <div id='form-container'>
           <SearchForm setCities={setCities} />
+          <DarkModeSwitch />
           {cities && <CityList list={cities} handleSelect={handleSelect} /> }
         </div>
 
