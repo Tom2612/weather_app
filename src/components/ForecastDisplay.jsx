@@ -1,11 +1,14 @@
+import { useContext } from "react";
+import { darkModeContext } from "../contexts/DarkModeContext";
 import codeSelector from '../utils/codeSelector';
 import format from 'date-fns/format';
 
 export default function ForecastDisplay(props) {
     const { forecast } = props.data;
+    const { darkMode } = useContext(darkModeContext);
 
     return (
-        <div id='forecast-container'>
+        <div id='forecast-container' className={darkMode ? 'dark' : ''}>
             {forecast.map((day, index) => (
                 <div key={index}>
                     <h1>{format(new Date(day.dt_txt.split(' ')[0]), 'EEEE')}</h1>

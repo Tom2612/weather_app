@@ -1,8 +1,11 @@
-
+import { useContext } from "react";
+import { darkModeContext } from "../contexts/DarkModeContext";
 
 export default function ExtendedWeatherDisplay({ data }) {
+    const { darkMode } = useContext(darkModeContext);
+    
     return (
-        <div id='extended-weather-container'>
+        <div id='extended-weather-container' className={darkMode ? 'dark' : ''}>
             <span className="material-symbols-outlined">thermostat</span>
             <p>Feels Like: <strong>{data.weather.main.feels_like.toFixed(1)} &deg;C</strong></p>
             <span className="material-symbols-outlined">water_drop</span>
