@@ -1,15 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { darkModeContext } from './contexts/DarkModeContext';
 import SearchForm from './components/SearchForm';
 import CityList from './components/CityList';
 import WeatherDisplay from './components/WeatherDisplay';
 import ForecastDisplay from './components/ForecastDisplay';
 import ExtendedWeatherDisplay from './components/ExtendedWeatherDisplay';
-import { DarkModeProvider } from './contexts/DarkModeContext';
 import DarkModeSwitch from './components/DarkModeSwitch';
 
 function App() {
   const [cities, setCities] = useState(null);
   const [data, setData] = useState(null);
+  const { darkMode } = useContext(darkModeContext);
 
   useEffect(() => {
     const getPreviousLocation = async () => {
@@ -50,9 +51,9 @@ function App() {
   }
 
   return (
-    <DarkModeProvider>
+    <>
       <div id='container-main'>
-        <div id='form-container'>
+        <div id='form-container' style={{ borderBottom: darkMode ? '1px solid white' : '1px solid black'}}>
           <div id='controls-container'>
             <SearchForm setCities={setCities} />
             <DarkModeSwitch />
@@ -68,7 +69,7 @@ function App() {
 
         {data && <ForecastDisplay data={data} />}        
       </div>
-    </DarkModeProvider>
+    </>
   )
 }
 

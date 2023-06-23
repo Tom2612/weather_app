@@ -8,7 +8,7 @@ export default function ForecastDisplay(props) {
     const { darkMode } = useContext(darkModeContext);
 
     return (
-        <div id='forecast-container' className={darkMode ? 'dark' : ''}>
+        <div id='forecast-container' className={darkMode ? 'dark' : ''} style={{ borderTop: darkMode ? '1px solid white' : '1px solid black'}}>
             {forecast.map((day, index) => (
                 <div key={index}>
                     <h1>{format(new Date(day.dt_txt.split(' ')[0]), 'EEEE')}</h1>
