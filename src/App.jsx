@@ -52,7 +52,13 @@ function App() {
 
   return (
     <>
-      <div id='container-main'>
+      <div id='container-main' style={{
+        backgroundImage: 
+        darkMode ? 
+          'url(https://images.unsplash.com/photo-1684624957060-d532ceddce98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80)'
+          : 
+          'url(https://images.unsplash.com/photo-1648213649718-ddaba6e6b9a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80)'
+      }}>
         <div id='form-container' style={{ borderBottom: darkMode ? '1px solid white' : '1px solid black'}}>
           <div id='controls-container'>
             <SearchForm setCities={setCities} />

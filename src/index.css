@@ -12,10 +12,9 @@ body {
     /* background: no-repeat url('https://images.unsplash.com/photo-1640690821275-c6aa1e1ccee3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80'); */
     /* background: no-repeat url('https://images.unsplash.com/photo-1687201363580-1cd1bb33c2b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80'); */
     /* Dark Theme */
-    /* background: no-repeat url('https://images.unsplash.com/photo-1676600413487-0ebf7ca3814f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1300&q=80'); */
     /* background: no-repeat url('https://images.unsplash.com/photo-1684624957060-d532ceddce98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80'); */
     /* background: no-repeat url('https://images.unsplash.com/photo-1683263170021-b1188a406864?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80'); */
-    background: no-repeat url('https://images.unsplash.com/photo-1681852287086-daa5deee6175?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80');
+    /* background: no-repeat url('https://images.unsplash.com/photo-1681852287086-daa5deee6175?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80'); */
     /* Light Theme */
     /* background: no-repeat url('https://images.unsplash.com/photo-1648213649718-ddaba6e6b9a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80'); */
     /* background: no-repeat url('https://images.unsplash.com/photo-1679913969285-64f089885005?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80'); */
@@ -23,7 +22,6 @@ body {
     /* background: no-repeat url('https://images.unsplash.com/photo-1554147090-e1221a04a025?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1148&q=80'); */
     /* background: no-repeat url('https://images.unsplash.com/photo-1536514498073-50e69d39c6cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80'); */
     /* background: no-repeat url('https://images.unsplash.com/photo-1465173121987-373740a169b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'); */
-    background-size: cover;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
@@ -41,6 +39,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #form-container {
     border-bottom: 1px solid black;
@@ -94,9 +94,9 @@ h1, h2, h3, h4, h5, h6 {
         cursor: pointer;
     }
     & .button-light {
-        color: white;
-        background: black;
-        border: 1px solid black;
+        color: black;
+        background: none;
+        border: 2px solid black;
     }
     & .button-dark {
         color: white;
