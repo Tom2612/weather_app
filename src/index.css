@@ -46,6 +46,25 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid black;
     margin: 0 2rem 2rem 2rem;
     padding: 1rem;
+    & #controls-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    & #color-mode {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        background: none;
+        border: 2px solid black;
+        color: black;
+        font-weight: 700;
+        font-size: 1rem;
+        & .material-symbols-outlined {
+            font-variation-settings: 
+            'wght' 400
+            ;
+        }       
+    }
     & input {
         background:none;
         padding: 5px;

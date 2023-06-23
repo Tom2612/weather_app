@@ -53,8 +53,10 @@ function App() {
     <DarkModeProvider>
       <div id='container-main'>
         <div id='form-container'>
-          <SearchForm setCities={setCities} />
-          <DarkModeSwitch />
+          <div id='controls-container'>
+            <SearchForm setCities={setCities} />
+            <DarkModeSwitch />
+          </div>
           {cities && <CityList list={cities} handleSelect={handleSelect} /> }
         </div>
 
